@@ -379,19 +379,19 @@ export default function ContactPage() {
                   </option>
 
                   <option value="Under ₹25,000" className="bg-[#0b1728]">
-                    Under ₹25,000
+                    Under $250
                   </option>
 
                   <option value="₹25,000 – ₹50,000" className="bg-[#0b1728]">
-                    ₹25,000 – ₹50,000
+                    $250 – $500
                   </option>
 
                   <option value="₹50,000 – ₹1,00,000" className="bg-[#0b1728]">
-                    ₹50,000 – ₹1,00,000
+                    $500 – $1000
                   </option>
 
                   <option value="Above ₹1,00,000" className="bg-[#0b1728]">
-                    Above ₹1,00,000
+                    Above $1000
                   </option>
 
                   <option value="Not decided" className="bg-[#0b1728]">
