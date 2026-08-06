@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { FormEvent, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   ArrowRight,
   Check,
@@ -83,6 +84,8 @@ const quickAmounts: Record<Currency, number[]> = {
   INR: [100, 300, 500, 1000],
   USD: [2, 5, 10, 20],
 };
+
+const router = useRouter();
 
 export default function BuyMeACoffeePage() {
   const [currency, setCurrency] = useState<Currency>("INR");
@@ -255,12 +258,16 @@ export default function BuyMeACoffeePage() {
               );
             }
 
-            setSuccess(
-              `Thank you${
-                name.trim() ? `, ${name.trim()}` : ""
-              }! Your support of ${formatAmount(
-                paymentAmount
-              )} was received successfully.`
+            // setSuccess(
+            //   `Thank you${
+            //     name.trim() ? `, ${name.trim()}` : ""
+            //   }! Your support of ${formatAmount(
+            //     paymentAmount
+            //   )} was received successfully.`
+            // );
+
+            router.replace(
+              `/payment/success?paymentId=${response.razorpay_payment_id}`
             );
 
             setName("");
