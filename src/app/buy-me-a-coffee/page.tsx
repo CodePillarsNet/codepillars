@@ -85,9 +85,9 @@ const quickAmounts: Record<Currency, number[]> = {
   USD: [2, 5, 10, 20],
 };
 
-const router = useRouter();
-
 export default function BuyMeACoffeePage() {
+  const router = useRouter();
+
   const [currency, setCurrency] = useState<Currency>("INR");
   const [amount, setAmount] = useState("100");
 
